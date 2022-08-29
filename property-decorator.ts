@@ -1,4 +1,6 @@
 function propertyInformation(target: Object, propertyKey: string) {
+  console.log('target', propertyKey);
+  
   let value: string = this[propertyKey];
 
   const get = function () {
@@ -28,3 +30,5 @@ class BankPropertyDecorator {
 const bankPropertyDecorator = new BankPropertyDecorator("Ashley", "123456");
 bankPropertyDecorator.pin;
 bankPropertyDecorator.pin = "654321";
+console.log(bankPropertyDecorator);
+
